@@ -46,9 +46,11 @@ Below is a list of test case files by scenario. Each file can be downloaded and 
 > *Note:* Please click the links above to download individual files for each scenario or testing area.
 
 ## Usage
-1. Download the relevant test case file(s) from the links above.
-2. Review and execute test cases as per your testing environment and requirements.
-3. Validate expected vs. actual results to ensure all scenarios are covered.
+- Select and download the relevant test case file(s) from the links above.
+- Review each test case and prepare your testing environment accordingly.
+- Execute the test cases, comparing expected vs. actual results.
+- Ensure all scenarios and edge cases are thoroughly validated.
+
 
 ## Contributing
 Contributions to the Loan Management Testing Project are welcome! If you have suggestions for improvements or additional test cases, feel free to fork the repository and submit a pull request.
