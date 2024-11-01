@@ -38,7 +38,7 @@ Below is a list of test case files by scenario. Each file can be downloaded and 
 
 - **[User Registration and Authentication](#)**: Test cases covering registration and login processes.
 - **[Loan Application Submissions](#)**: Test cases for submitting new loan applications, including field validations and submission errors.
-- **[Loan Eligibility Check Scenarios](#)**: Test cases for eligibility checks based on user information, including positive, negative, and out-of-the-box scenarios.
+- **[Loan Eligibility Check Page](EligibilityCheck.csv)**: Test cases for eligibility checks based on user information, including positive, negative, and out-of-the-box scenarios.
 - **[Interest Calculation and Loan Terms](#)**: Test cases to validate accurate interest calculations based on loan amount, duration, and other factors.
 - **[Payment Processing and Transaction History](#)**: Test cases for payment submissions, history tracking, and error handling.
 - **[Error Handling and Input Validation](#)**: Test cases to ensure robust handling of invalid inputs and unexpected user actions.
