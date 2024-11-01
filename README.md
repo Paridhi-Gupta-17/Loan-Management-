@@ -32,7 +32,7 @@ The purpose of this project is to demonstrate the ability to:
 
 ## Test Cases
 Comprehensive test cases are documented in the Excel file below:
-- [Download Test Cases](path_to_your_excel_file.xlsx)
+- [Download Test Cases](LoanManagement.csv)
 
 The Excel sheet contains detailed information on each test case, ensuring thorough documentation and clarity for quality assurance processes.
 
