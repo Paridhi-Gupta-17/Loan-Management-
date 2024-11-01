@@ -1,0 +1,170 @@
+Scenario ID,Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+SCENARIO_1,User Registration,TC_1_1,User is on the registration page.,1. Fill in valid details.,User is successfully registered and redirected.,"Registration successful, user redirected to dashboard.",Pass,Paridhi,No issues encountered.
+,,,,2. Click 'Register'.,,,,,
+,,TC_1_2,User is on the registration page.,1. Fill in existing email.,User receives an error message for existing email.,Error message displayed as expected.,Pass,Paridhi,Validated existing email check.
+,,,,2. Click 'Register'.,,,,,
+,,TC_1_3,User is on the registration page.,1. Fill in an invalid email.,User receives a validation error for invalid email.,Validation error displayed correctly.,Pass,Paridhi,Email format validation works.
+,,,,2. Click 'Register'.,,,,,
+,,TC_1_4,User is on the registration page.,1. Fill in weak password.,User receives an error for weak password.,Password strength validation triggered correctly.,Pass,Paridhi,Strong password policy enforced.
+,,,,2. Click 'Register'.,,,,,
+,,TC_1_5,User is on the registration page.,1. Leave mandatory fields blank.,User receives a validation error for required fields.,Required fields validation functioning correctly.,Pass,Paridhi,All mandatory fields checked.
+,,,,2. Click 'Register'.,,,,,
+SCENARIO_2,User Login,TC_2_1,User has valid credentials.,1. Navigate to login page.,User is logged in and redirected.,User logged in successfully.,Pass,Paridhi,Smooth login process.
+,,,,2. Enter valid credentials.,,,,,
+,,,,3. Click 'Login'.,,,,,
+,,TC_2_2,User is on the login page.,1. Enter invalid email.,User receives an error for invalid email.,"Error displayed: ""Email not found.""",Pass,Paridhi,Error handling is effective.
+,,,,2. Enter password.,,,,,
+,,,,3. Click 'Login'.,,,,,
+,,TC_2_3,User is on the login page.,1. Enter valid email.,User receives an error for incorrect password.,"Error message shown: ""Incorrect password.""",Pass,Paridhi,Clear error messaging.
+,,,,2. Enter incorrect password.,,,,,
+,,,,3. Click 'Login'.,,,,,
+,,TC_2_4,User account is inactive.,1. Enter inactive account details.,User receives an error indicating inactivity.,Inactivity error displayed as expected.,Pass,Paridhi,Inactive accounts managed well.
+,,,,2. Click 'Login'.,,,,,
+,,TC_2_5,User has forgotten password.,1. Click 'Forgot Password'.,User receives an email with reset instructions.,Email sent with reset instructions.,Pass,Paridhi,Reset email received quickly.
+,,,,2. Enter email.,,,,,
+,,,,3. Click 'Submit'.,,,,,
+SCENARIO_3,Loan Application,TC_3_1,User is logged in.,1. Navigate to loan application.,Loan application is successfully submitted.,Application submitted without issues.,Pass,Paridhi,Application processed efficiently.
+,,,,2. Fill in valid data.,,,,,
+,,,,3. Submit.,,,,,
+,,TC_3_2,User is logged in.,1. Navigate to loan application.,User receives an error for required fields.,Validation error for missing fields displayed.,Pass,Paridhi,All required checks performed.
+,,,,2. Leave mandatory fields blank.,,,,,
+,,,,3. Submit.,,,,,
+,,TC_3_3,User is logged in.,1. Fill in invalid income details.,User receives an error for invalid income.,Error for invalid income shown correctly.,Pass,Paridhi,Income validation successful.
+,,,,2. Submit.,,,,,
+,,TC_3_4,User is logged in.,1. Fill in unsupported loan amount.,User receives an error for exceeding loan limits.,Error for unsupported amount displayed.,Pass,Paridhi,Loan limits enforced correctly.
+,,,,2. Submit.,,,,,
+,,TC_3_5,User is logged in.,1. Start application.,System times out and user is prompted to reapply.,Timeout error prompted as expected.,Pass,Paridhi,Session management effective.
+,,,,2. Leave session idle.,,,,,
+,,,,3. Attempt to submit.,,,,,
+SCENARIO_4,Document Upload,TC_4_1,User is logged in and on the upload page.,1. Select a valid document.,Document uploads successfully.,Document uploaded without issues.,Pass,Paridhi,Upload process smooth.
+,,,,2. Click 'Upload'.,,,,,
+,,TC_4_2,User is logged in and on the upload page.,1. Select an unsupported file type.,User receives an error for unsupported file type.,Unsupported file error shown.,Pass,Paridhi,File type validation works.
+,,,,2. Click 'Upload'.,,,,,
+,,TC_4_3,User is logged in and on the upload page.,1. Select a file exceeding size limits.,User receives an error for exceeding file size limit.,File size limit enforced correctly.,Pass,Paridhi,Size validation effective.
+,,,,2. Click 'Upload'.,,,,,
+,,TC_4_4,User is logged in and on the upload page.,1. Select incomplete document.,User receives an error for incomplete documentation.,Incomplete document error displayed.,Pass,Paridhi,Complete documents enforced.
+,,,,2. Click 'Upload'.,,,,,
+,,TC_4_5,User is logged in and on the upload page.,1. Start upload.,User is successfully redirected without uploading.,User redirected after canceling.,Pass,Paridhi,Cancel functionality works well.
+,,,,2. Click 'Cancel'.,,,,,
+SCENARIO_5,Loan Calculator,TC_5_1,User is on the loan calculator page.,1. Enter principal amount.,Calculator shows accurate EMI and interest details.,EMI calculated correctly as expected.,Pass,Paridhi,Accurate calculations confirmed.
+,,,,2. Select tenure.,,,,,
+,,,,3. Click 'Calculate'.,,,,,
+,,TC_5_2,User is on the loan calculator page.,1. Change interest rate.,Calculator updates with new EMI based on interest.,EMI updated correctly with new interest.,Pass,Paridhi,Interest updates processed.
+,,,,2. Click 'Calculate'.,,,,,
+,,TC_5_3,User is on the loan calculator page.,1. Change tenure.,Calculator shows updated EMI for new tenure.,EMI adjusted correctly for new tenure.,Pass,Paridhi,Tenure changes reflected.
+,,,,2. Click 'Calculate'.,,,,,
+,,TC_5_4,User is on the loan calculator page.,1. Enter invalid principal amount.,User receives an error for invalid amount.,Validation error shown for invalid amount.,Pass,Paridhi,Amount validation works correctly.
+,,,,2. Click 'Calculate'.,,,,,
+,,TC_5_5,User is on the loan calculator page.,1. Leave all fields blank.,User receives an error for required fields.,Required fields error displayed correctly.,Pass,Paridhi,All inputs checked.
+,,,,2. Click 'Calculate'.,,,,,
+SCENARIO_6,Loan Status Tracking,TC_6_1,User has a valid loan ID.,1. Navigate to loan status tracking.,Loan status is displayed correctly.,"Status displayed as ""Approved"".",Pass,Paridhi,Status tracking functioning well.
+,,,,2. Enter valid loan ID.,,,,,
+,,,,3. Click 'Track'.,,,,,
+,,TC_6_2,User has an invalid loan ID.,1. Navigate to loan status tracking.,User receives an error for invalid loan ID.,Error displayed for loan ID not found.,Pass,Paridhi,Invalid ID handling effective.
+,,,,2. Enter invalid loan ID.,,,,,
+,,,,3. Click 'Track'.,,,,,
+,,TC_6_3,User has a pending loan application.,1. Navigate to loan status tracking.,"Status shows as ""Pending Approval"".","Status displayed as ""Pending Approval"".",Pass,Paridhi,Pending status visible.
+,,,,2. Enter valid loan ID.,,,,,
+,,,,3. Click 'Track'.,,,,,
+,,TC_6_4,User has a loan in processing.,1. Navigate to loan status tracking.,"Status shows as ""In Processing"".","Status displayed as ""In Processing"".",Pass,Paridhi,Processing status visible.
+,,,,2. Enter valid loan ID.,,,,,
+,,,,3. Click 'Track'.,,,,,
+,,TC_6_5,User has already paid off the loan.,1. Navigate to loan status tracking.,"Status shows as ""Paid Off"".","Status displayed as ""Paid Off"".",Pass,Paridhi,Paid off status confirmed.
+,,,,2. Enter valid loan ID.,,,,,
+,,,,3. Click 'Track'.,,,,,
+SCENARIO_7,Payment Processing,TC_7_1,User is logged in and on payment page.,1. Enter valid payment details.,Payment processed successfully.,Payment confirmation received.,Pass,Paridhi,Smooth payment process.
+,,,,2. Click 'Pay Now'.,,,,,
+,,TC_7_2,User is logged in and on payment page.,1. Enter invalid card details.,User receives an error for invalid card details.,Invalid card error displayed correctly.,Pass,Paridhi,Card validation works.
+,,,,2. Click 'Pay Now'.,,,,,
+,,TC_7_3,User is logged in and on payment page.,1. Enter expired card details.,User receives an error for expired card.,Expired card error displayed.,Pass,Paridhi,Expiration validation effective.
+,,,,2. Click 'Pay Now'.,,,,,
+,,TC_7_4,User is logged in and on payment page.,1. Enter insufficient funds.,User receives an error for insufficient funds.,Insufficient funds error shown.,Pass,Paridhi,Funds check implemented.
+,,,,2. Click 'Pay Now'.,,,,,
+,,TC_7_5,User is logged in and on payment page.,1. Click 'Cancel' during payment process.,User is redirected without making payment.,Payment process canceled as expected.,Pass,Paridhi,Cancellation works correctly.
+SCENARIO_8,Notification Settings,TC_8_1,User is logged in.,1. Navigate to notification settings.,Settings updated successfully.,Notifications enabled successfully.,Pass,Paridhi,Settings update smooth.
+,,,,2. Enable email notifications.,,,,,
+,,,,3. Save.,,,,,
+,,TC_8_2,User is logged in.,1. Disable SMS notifications.,Settings updated successfully.,SMS notifications disabled successfully.,Pass,Paridhi,Notification preferences updated.
+,,,,2. Save.,,,,,
+,,TC_8_3,User is logged in.,1. Change notification frequency.,Settings updated successfully.,Notification frequency updated successfully.,Pass,Paridhi,Frequency changes processed.
+,,,,2. Save.,,,,,
+,,TC_8_4,User is logged in.,1. Leave settings unchanged.,No changes made; settings remain the same.,No changes confirmed; settings unchanged.,Pass,Paridhi,Unchanged settings handled well.
+,,,,2. Click 'Save'.,,,,,
+,,TC_8_5,User is logged in.,1. Attempt to save without making any changes.,User receives a message stating no changes to save.,Message displayed correctly for no changes.,Pass,Paridhi,Effective check for changes.
+,,,,2. Click 'Save'.,,,,,
+SCENARIO_9,Feedback Submission,TC_9_1,User is logged in and on feedback page.,1. Fill in feedback form.,Feedback submitted successfully.,Feedback submission confirmed.,Pass,Paridhi,Feedback process working well.
+,,,,2. Submit feedback.,,,,,
+,,TC_9_2,User is logged in and on feedback page.,1. Submit empty feedback form.,User receives an error for required fields.,Required fields validation triggered.,Pass,Paridhi,All required fields checked.
+,,TC_9_3,User is logged in and on feedback page.,1. Fill in feedback with invalid characters.,User receives an error for invalid characters.,Validation for invalid characters triggered.,Pass,Paridhi,Character validation successful.
+,,,,2. Submit.,,,,,
+,,TC_9_4,User is logged in and on feedback page.,1. Fill in feedback with more than allowed characters.,User receives an error for exceeding character limit.,Length validation error displayed correctly.,Pass,Paridhi,Character length enforced.
+,,,,2. Submit.,,,,,
+,,TC_9_5,User is logged in and on feedback page.,1. Fill in feedback and click 'Cancel'.,User is redirected without submitting feedback.,Feedback not submitted; user redirected.,Pass,Paridhi,Cancel functionality works well.
+SCENARIO_10,Account Deletion,TC_10_1,User is logged in and on account settings page.,1. Click 'Delete Account'.,Account is successfully deleted.,Account deletion confirmed.,Pass,Paridhi,Deletion process smooth.
+,,,,2. Confirm deletion.,,,,,
+,,TC_10_2,User is logged in and on account settings page.,1. Click 'Delete Account'.,Account remains active after cancellation.,Account still active; deletion canceled successfully.,Pass,Paridhi,Cancellation works as intended.
+,,,,2. Cancel deletion.,,,,,
+,,TC_10_3,User is logged in and on account settings page.,1. Attempt to delete account without confirmation.,User receives a confirmation prompt.,Confirmation prompt displayed as expected.,Pass,Paridhi,Confirmation handling effective.
+,,TC_10_4,User is logged in and has ongoing transactions.,1. Attempt to delete account.,User receives an error for ongoing transactions.,Error for ongoing transactions displayed correctly.,Pass,Paridhi,Transaction checks working.
+,,TC_10_5,User is logged in and on account settings page.,1. Click 'Delete Account'.,"Account is deleted, and user is logged out.","User logged out, account deletion confirmed.",Pass,Paridhi,User logged out post-deletion.
+,,,,2. Confirm deletion.,,,,,
+SCENARIO_11,Profile Update,TC_11_1,User is logged in and on profile page.,1. Update name field.,Profile updates successfully.,Profile updated with new name.,Pass,Paridhi,Profile update process smooth.
+,,,,2. Click 'Save'.,,,,,
+,,TC_11_2,User is logged in and on profile page.,1. Update email to existing email.,User receives an error for existing email.,Existing email error displayed correctly.,Pass,Paridhi,Email validation works.
+,,,,2. Click 'Save'.,,,,,
+,,TC_11_3,User is logged in and on profile page.,1. Update profile with invalid data.,User receives validation error for invalid data.,Invalid data error shown correctly.,Pass,Paridhi,Data validation functioning well.
+,,,,2. Click 'Save'.,,,,,
+,,TC_11_4,User is logged in and on profile page.,1. Leave mandatory fields blank.,User receives error for required fields.,Required fields validation functioning.,Pass,Paridhi,All mandatory fields checked.
+,,,,2. Click 'Save'.,,,,,
+,,TC_11_5,User is logged in and on profile page.,1. Attempt to save without changes.,User is notified of no changes made.,No changes confirmation displayed.,Pass,Paridhi,Unchanged settings handled well.
+SCENARIO_12,Help and Support,TC_12_1,User is on the help page.,1. Search for help topic.,Relevant help articles displayed.,Help articles found successfully.,Pass,Paridhi,Help search functioning correctly.
+,,TC_12_2,User is on the help page.,1. Search for non-existent topic.,User receives 'no results' message.,'No results' message displayed correctly.,Pass,Paridhi,Non-existent topic handling fine.
+,,TC_12_3,User is on the help page.,1. Access a help article.,Help article loads successfully.,Help article displayed correctly.,Pass,Paridhi,Article access functioning well.
+,,TC_12_4,User is on the help page.,1. Attempt to submit a query.,User receives a prompt for required fields.,Required fields validation triggered.,Pass,Paridhi,Query submission checks working.
+,,TC_12_5,User is on the help page.,1. Submit query with invalid email.,User receives error for invalid email.,Email validation functioning well.,Pass,Paridhi,Invalid email checks effective.
+SCENARIO_13,Logout Functionality,TC_13_1,User is logged in.,1. Click 'Logout'.,User is logged out successfully.,Logout confirmation displayed.,Pass,Paridhi,Logout process smooth.
+,,TC_13_2,User is logged in.,1. Attempt to navigate after logging out.,User is redirected to login page.,Redirected to login page as expected.,Pass,Paridhi,Redirect post-logout functioning.
+,,TC_13_3,User is logged in and session is active.,1. Wait for session to timeout.,User is logged out after session timeout.,Session timeout handled correctly.,Pass,Paridhi,Session handling effective.
+,,TC_13_4,User is logged in.,1. Click 'Logout'.,User receives message stating already logged out.,Double logout handling effective.,Pass,Paridhi,Logout process checks well.
+,,,,2. Attempt to log out again.,,,,,
+,,TC_13_5,User is logged in.,1. Click 'Logout'.,User should remain logged out upon reopening.,User remains logged out as expected.,Pass,Paridhi,Logout persistence works.
+,,,,2. Close browser without confirmation.,,,,,
+SCENARIO_14,Multi-Factor Authentication,TC_14_1,User is logged in with MFA enabled.,1. Attempt to log in.,User receives MFA prompt.,MFA prompt displayed as expected.,Pass,Paridhi,MFA functionality working.
+,,TC_14_2,User is logged in with MFA enabled.,1. Enter incorrect MFA code.,User receives an error for invalid code.,Invalid code error displayed correctly.,Pass,Paridhi,Invalid MFA handling effective.
+,,TC_14_3,User is logged in with MFA enabled.,1. Enter correct MFA code.,User gains access to the account.,Access granted with correct MFA.,Pass,Paridhi,MFA access verification functioning.
+,,TC_14_4,User is logged in with MFA enabled.,1. Attempt to log in without MFA.,User receives a message stating MFA is required.,MFA requirement message displayed.,Pass,Paridhi,MFA enforcement working well.
+,,TC_14_5,User is logged in with MFA enabled.,1. Attempt to reset MFA settings.,User receives a prompt for authentication.,Authentication prompt displayed correctly.,Pass,Paridhi,MFA reset checks functioning.
+SCENARIO_15,User Role Management,TC_15_1,Admin is logged in.,1. Assign role to user.,User role updated successfully.,Role change confirmed successfully.,Pass,Paridhi,Role assignment process smooth.
+,,,,2. Save changes.,,,,,
+,,TC_15_2,Admin is logged in.,1. Attempt to assign role to non-existent user.,User receives an error for invalid user.,Invalid user error displayed correctly.,Pass,Paridhi,User validation effective.
+,,TC_15_3,Admin is logged in.,1. Remove role from user.,User role removed successfully.,Role removal confirmed successfully.,Pass,Paridhi,Role removal process smooth.
+,,,,2. Save changes.,,,,,
+,,TC_15_4,Admin is logged in.,1. Attempt to assign existing role to user.,User receives an error for existing role.,Existing role error displayed correctly.,Pass,Paridhi,Role conflict handling effective.
+,,TC_15_5,Admin is logged in.,1. Attempt to assign role without necessary permissions.,User receives an error for insufficient permissions.,Permissions validation triggered.,Pass,Paridhi,Permission checks functioning well.
+SCENARIO_16,Data Export,TC_16_1,User is logged in and on data export page.,1. Select data range.,Data exported successfully.,Export confirmation received.,Pass,Paridhi,Data export process smooth.
+,,,,2. Click 'Export'.,,,,,
+,,TC_16_2,User is logged in and on data export page.,1. Attempt to export with invalid data range.,User receives an error for invalid range.,Invalid range error displayed correctly.,Pass,Paridhi,Range validation checks working.
+,,TC_16_3,User is logged in and on data export page.,1. Attempt to export without selecting data.,User receives an error for no data selected.,No data selected error displayed correctly.,Pass,Paridhi,Data selection validation effective.
+,,TC_16_4,User is logged in and on data export page.,1. Select data format.,Data exported in selected format.,Data format confirmation received.,Pass,Paridhi,Format handling checks functioning.
+,,,,2. Click 'Export'.,,,,,
+,,TC_16_5,User is logged in and on data export page.,1. Attempt to export while logged out.,User redirected to login page.,Redirect to login page as expected.,Pass,Paridhi,Logout handling during export.
+SCENARIO_17,System Performance Monitoring,TC_17_1,User is on performance monitoring page.,1. Refresh performance metrics.,Metrics updated successfully.,Metrics refreshed as expected.,Pass,Paridhi,Refresh functionality working.
+,,TC_17_2,User is on performance monitoring page.,1. View performance graphs.,Graphs displayed correctly.,Performance graphs loaded as expected.,Pass,Paridhi,Graphs rendering effective.
+,,TC_17_3,User is on performance monitoring page.,1. Filter performance metrics.,Metrics filtered successfully.,Filter results displayed correctly.,Pass,Paridhi,Filtering functionality working.
+,,TC_17_4,User is on performance monitoring page.,1. Attempt to access while logged out.,User redirected to login page.,Redirected as expected when logged out.,Pass,Paridhi,Access control functioning.
+,,TC_17_5,User is on performance monitoring page.,1. Download performance report.,Report downloaded successfully.,Download confirmation received.,Pass,Paridhi,Download functionality effective.
+SCENARIO_18,API Integration Testing,TC_18_1,User is on API testing page.,1. Send valid API request.,API response received successfully.,Valid response displayed correctly.,Pass,Paridhi,API request handling effective.
+,,TC_18_2,User is on API testing page.,1. Send invalid API request.,User receives error for invalid request.,Invalid request error displayed correctly.,Pass,Paridhi,Error handling for invalid request effective.
+,,TC_18_3,User is on API testing page.,1. Send request without authentication.,User receives authentication error.,Auth error displayed correctly.,Pass,Paridhi,Authentication checks functioning well.
+,,TC_18_4,User is on API testing page.,1. Send request exceeding rate limit.,User receives rate limit exceeded error.,Rate limit error displayed correctly.,Pass,Paridhi,Rate limiting checks working.
+,,TC_18_5,User is on API testing page.,1. Access API documentation.,Documentation loads successfully.,API docs displayed correctly.,Pass,Paridhi,Documentation access functioning well.
+SCENARIO_19,Notifications Management,TC_19_1,User is logged in.,1. Check notifications.,Notifications displayed correctly.,Notifications loading as expected.,Pass,Paridhi,Notification loading checks working.
+,,TC_19_2,User is logged in.,1. Clear notifications.,Notifications cleared successfully.,Clear confirmation displayed.,Pass,Paridhi,Notification clearance functioning well.
+,,TC_19_3,User is logged in.,1. Access notification settings.,Notification settings page loads correctly.,Settings page displayed as expected.,Pass,Paridhi,Settings access functioning properly.
+,,TC_19_4,User is logged in.,1. Update notification preferences.,Preferences updated successfully.,Preferences confirmation received.,Pass,Paridhi,Preferences update process smooth.
+,,TC_19_5,User is logged in.,1. Check notifications while logged out.,User redirected to login page.,Redirect to login page as expected.,Pass,Paridhi,Logout handling during notifications.
+SCENARIO_20,Mobile Responsiveness,TC_20_1,User accesses site on mobile device.,1. Navigate through pages.,Pages render correctly on mobile.,Mobile rendering checks passed.,Pass,Paridhi,Mobile responsiveness functioning well.
+,,TC_20_2,User accesses site on mobile device.,1. Check layout consistency.,Layouts consistent across pages.,Layout consistency confirmed successfully.,Pass,Paridhi,Layout consistency checks effective.
+,,TC_20_3,User accesses site on mobile device.,1. Test touch interactions.,Touch interactions work smoothly.,Touch functionality working as expected.,Pass,Paridhi,Touch interaction checks functioning well.
+,,TC_20_4,User accesses site on mobile device.,1. Test mobile navigation.,Navigation smooth and user-friendly.,Navigation functionality checks effective.,Pass,Paridhi,Navigation checks smooth on mobile.
+,,TC_20_5,User accesses site on mobile device.,1. Check for performance lag.,Site loads quickly without lag.,Performance checks confirmed.,Pass,Paridhi,Performance optimization on mobile effective.
