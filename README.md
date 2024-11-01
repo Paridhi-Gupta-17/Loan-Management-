@@ -40,4 +40,4 @@ The Excel sheet contains detailed information on each test case, ensuring thorou
 Contributions to the Loan Management Testing Project are welcome! If there are suggestions for improvements or additional test cases, feel free to fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more information.
