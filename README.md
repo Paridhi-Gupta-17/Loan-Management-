@@ -40,7 +40,7 @@ Each test case is documented with:
 Below is a list of test case files by scenario. Each file can be downloaded and used for testing specific aspects of the loan management application.
 
 1. **[Home Page / Dashboard](HomePage.csv)**: Test cases covering dynamic content loading, loans summary, announcements, and account health indicators.
-2. **[User Registration and Authentication](#)**: Test cases covering registration and login processes.
+2. **[User Registration and Authentication](RegistrationAuthorization.csv)**: Test cases covering registration and login processes.
 3. **[Loan Application Submissions](#)**: Test cases for submitting new loan applications, including field validations and submission errors.
 4. **[Loan Eligibility Check Page](EligibilityCheck.csv)**: Test cases for eligibility checks based on user information, including positive, negative, and out-of-the-box scenarios.
 5. **[Interest Calculation and Loan Terms](#)**: Test cases to validate accurate interest calculations based on loan amount, duration, and other factors.
