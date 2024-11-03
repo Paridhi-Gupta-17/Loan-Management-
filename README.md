@@ -44,16 +44,16 @@ Below is a list of test case files by scenario. Each file can be downloaded and 
 3. **[Loan Application Submissions](ApplicationSubmissions.csv)**: Test cases for submitting new loan applications, including field validations and submission errors.
 4. **[Loan Eligibility Check Page](EligibilityCheck.csv)**: Test cases for eligibility checks based on user information, including positive, negative, and out-of-the-box scenarios.
 5. **[Interest Calculation and Loan Terms](InterestCalculation.csv)**: Test cases to validate accurate interest calculations based on loan amount, duration, and other factors.
-6. **[Payment Processing and Transaction History](#)**: Test cases for payment submissions, history tracking, and error handling.
-7. **[Error Handling and Input Validation](ErrorHandling.csv)**: Test cases to ensure robust handling of invalid inputs and unexpected user actions.
-8. **[Repayment Schedule](#)**: Test cases for verifying repayment options, schedules, and calculations based on user loans.
-9. **[Prepayment Options](#)**: Test cases to check functionality and validation of prepayment options for existing loans.
-10. **[Customer Support](#)**: Test cases for the customer support functionality, including chat support and FAQs.
-11. **[Notifications and Alerts](#)**: Test cases to ensure users receive timely notifications regarding payment due dates and account changes.
-12. **[Document Upload and Management](#)**: Test cases to validate the upload, management, and retrieval of necessary documents for loan applications.
-13. **[Profile Management](#)**: Test cases for updating user profile information, including personal details and account settings.
-14. **[Logout Functionality](#)**: Test cases to ensure proper logout behavior and session management.
-15. **[Feedback and Rating System](#)**: Test cases for submitting feedback and rating the loan management services.
+6. **[Payment Processing and Transaction History](PaymentProcess.csv)**: Test cases for payment submissions, history tracking, and error handling.
+8. **[Error Handling and Input Validation](ErrorHandling.csv)**: Test cases to ensure robust handling of invalid inputs and unexpected user actions.
+9. **[Repayment Schedule](#)**: Test cases for verifying repayment options, schedules, and calculations based on user loans.
+10. **[Prepayment Options](#)**: Test cases to check functionality and validation of prepayment options for existing loans.
+11. **[Customer Support](#)**: Test cases for the customer support functionality, including chat support and FAQs.
+12. **[Notifications and Alerts](#)**: Test cases to ensure users receive timely notifications regarding payment due dates and account changes.
+13. **[Document Upload and Management](#)**: Test cases to validate the upload, management, and retrieval of necessary documents for loan applications.
+14. **[Profile Management](#)**: Test cases for updating user profile information, including personal details and account settings.
+15. **[Logout Functionality](#)**: Test cases to ensure proper logout behavior and session management.
+16. **[Feedback and Rating System](#)**: Test cases for submitting feedback and rating the loan management services.
 
 > Note: Please click the links above to download individual files for each scenario or testing area.
 
