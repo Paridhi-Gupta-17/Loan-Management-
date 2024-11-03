@@ -1,0 +1,38 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify successful logout from the user dashboard,TC_LG_001,User logged into dashboard,1. Navigate to the dashboard.,User should be logged out successfully and redirected to the login page.,As expected,Passed,Paridhi,Validates standard logout functionality
+,,,"2. Click on the ""Logout"" button.",,,,,
+,,,3. Confirm the action if prompted.,,,,,
+2. Verify session termination after logout,TC_LG_002,"User logged in, session active",1. Logout from the system.,"User should be redirected to the login page, as the session is terminated.",As expected,Passed,Paridhi,Confirms session termination post-logout
+,,,2. Try accessing a restricted page via direct URL.,,,,,
+"3. Check ""Remember Me"" option retains login info after logout and re-login",TC_LG_003,"User logged in with ""Remember Me"" checked",1. Logout from the system.,"Login page should pre-fill username (and/or password, depending on ""Remember Me"" settings).",As expected,Passed,Paridhi,"Tests ""Remember Me"" persistence post-logout"
+,,,2. Close and reopen the browser.,,,,,
+,,,3. Navigate to the login page.,,,,,
+4. Verify logout functionality on multiple devices simultaneously,TC_LG_004,User logged into multiple devices,1. Logout from Device A.,"Device B session should also terminate if system supports global logout; otherwise, session remains active.",As expected,Passed,Paridhi,Confirms logout across devices
+,,,2. Attempt accessing account on Device B.,,,,,
+,,,3. Check if Device B session remains active or terminates.,,,,,
+5. Validate automatic logout after idle timeout,TC_LG_005,"User logged in, idle timeout setting",1. Log in and remain idle until timeout limit expires.,User should be automatically logged out after idle timeout and redirected to the login page.,As expected,Passed,Paridhi,Tests idle timeout logout functionality
+,,,2. Observe if automatic logout occurs.,,,,,
+6. Verify logout action during an active session from another browser tab,TC_LG_006,User logged in with multiple tabs open,1. Open multiple tabs with the loan management application.,User should be logged out on all tabs and redirected to login on refresh.,As expected,Passed,Paridhi,Tests logout across multiple tabs
+,,,2. Logout from one tab.,,,,,
+,,,3. Switch to other tab and refresh page.,,,,,
+7. Confirm logout action while a loan transaction is in progress,TC_LG_007,User in middle of a transaction,"1. Start a loan transaction (e.g., applying for or modifying a loan).",System should display warning message about unsaved progress or proceed with logout.,As expected,Passed,Paridhi,Ensures graceful logout during transactions
+,,,"2. Click on ""Logout"".",,,,,
+8. Verify logout redirection with unsaved profile changes,TC_LG_008,User has unsaved changes in profile,1. Make unsaved changes in profile settings.,System should display a warning about unsaved changes or proceed with logout based on user confirmation.,As expected,Passed,Paridhi,Validates logout with unsaved changes
+,,,"2. Click ""Logout"".",,,,,
+9. Check session token invalidation on logout,TC_LG_009,"User logged in, session token generated",1. Logout from the system.,API access should be denied as session token is invalidated post-logout.,As expected,Passed,Paridhi,Tests token invalidation on logout
+,,,2. Capture session token.,,,,,
+,,,3. Attempt to reuse token for API access.,,,,,
+10. Validate logout from mobile view (responsive design),TC_LG_010,"User logged in, mobile view enabled",1. Switch to mobile view or use mobile device.,"Logout should function correctly on mobile, redirecting to login page.",As expected,Passed,Paridhi,Ensures mobile compatibility for logout
+,,,"2. Click on ""Logout"" button.",,,,,
+11. Verify logout during an active support chat session,TC_LG_011,User in support chat,1. Start a live chat session with support.,"Chat should end automatically, and user should be logged out.",As expected,Passed,Paridhi,Tests chat session behavior on logout
+,,,"2. Click ""Logout"".",,,,,
+12. Confirm logout functionality from a “forgot password” page,TC_LG_012,User navigated to Forgot Password page,1. Go to Forgot Password page.,"User should be redirected to login, ensuring secure exit from sensitive screens.",As expected,Passed,Paridhi,Ensures secure exit from password reset
+,,,"2. Click on ""Logout"" or equivalent if visible.",,,,,
+,,,3. Try accessing restricted page post-logout.,,,,,
+13. Check user remains logged out after session expiry and auto-login disabled,TC_LG_013,"User session expired, auto-login disabled",1. Allow session to expire.,User should remain logged out with prompt to log back in.,As expected,Passed,Paridhi,Tests session expiry handling
+,,,2. Try accessing a restricted page.,,,,,
+,,,3. Observe redirection.,,,,,
+"14. Validate session persistence when user clicks ""Cancel"" on logout confirmation",TC_LG_014,"User initiates logout, cancel confirmation","1. Click on ""Logout"" button.","User should remain logged in, and session remains active without redirection.",As expected,Passed,Paridhi,Ensures correct handling of cancel action
+,,,"2. When confirmation prompt appears, select ""Cancel"".",,,,,
+"15. Verify logout accessibility compliance (e.g., keyboard shortcuts, screen reader compatibility)",TC_LG_015,"User logged in, accessibility tools active",1. Use keyboard to navigate to Logout.,Logout function should be accessible to users relying on accessibility tools.,As expected,Passed,Paridhi,Validates logout for accessibility
+,,,2. Confirm if accessible via keyboard and compatible with screen readers.,,,,,
