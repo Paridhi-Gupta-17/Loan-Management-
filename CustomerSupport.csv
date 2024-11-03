@@ -1,0 +1,44 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify live chat functionality for loan-related queries during support hours,TC_CS_001,Support hours active,1. Open live chat.,Live chat provides prompt and accurate answers within defined SLA (Service Level Agreement).,As expected,Passed,Paridhi,Tests speed and accuracy of live chat support
+,,,2. Enter loan-related question.,,,,,
+,,,3. Observe response time and answer relevance.,,,,,
+2. Test chatbot’s ability to answer frequently asked questions about loan repayments,TC_CS_002,"Chatbot active, FAQs set up",1. Open chatbot.,"Chatbot provides accurate, quick responses to FAQs about loan repayments, covering all common concerns.",As expected,Passed,Paridhi,Confirms FAQ knowledge coverage of chatbot
+,,,2. Enter a common repayment-related question.,,,,,
+,,,3. Check response for accuracy and completeness.,,,,,
+3. Validate customer support call-back request for unresolved chat inquiries,TC_CS_003,Chat inquiry escalated,1. Request callback via live chat.,"Callback is made within defined SLA, and support agent addresses unresolved issue from chat session.",As expected,Passed,Paridhi,Ensures callback request functionality
+,,,2. Confirm callback within SLA.,,,,,
+,,,3. Discuss issue with support agent.,,,,,
+4. Verify ability to generate and track a support ticket for a complex loan issue,TC_CS_004,Support ticket system operational,1. Open support ticket.,"Ticket is created, and status updates are available to track resolution progress.",As expected,Passed,Paridhi,Confirms support ticket generation and tracking
+,,,2. Enter details for complex issue.,,,,,
+,,,3. Submit and retrieve ticket status.,,,,,
+5. Check email support response for detailed loan documentation requests,TC_CS_005,Email support system available,1. Send email request for loan documents.,"Email support responds within SLA, attaching requested loan documents or providing relevant information.",As expected,Passed,Paridhi,Tests email support’s response accuracy
+,,,2. Wait for response.,,,,,
+,,,3. Check if requested documents are attached.,,,,,
+6. Test escalation of unresolved support tickets to the next support tier,TC_CS_006,Complex ticket unresolved in initial tier,1. Create a complex support ticket.,Ticket is escalated to the next support tier for advanced resolution.,As expected,Passed,Paridhi,Ensures escalation functionality for complex tickets
+,,,2. Wait for a tier-1 response.,,,,,
+,,,3. Escalate ticket due to unresolved status.,,,,,
+7. Confirm 24/7 self-service portal functionality for loan-related inquiries,TC_CS_007,Self-service portal operational,1. Access self-service portal.,"Self-service portal provides relevant loan information at all times, aiding customer independence.",As expected,Passed,Paridhi,Tests accessibility of self-service portal
+,,,"2. Search for information on loan-related topics (e.g., repayment, penalties).",,,,,
+8. Verify support assistance for prepayment inquiries and calculating savings through online calculator,TC_CS_008,Calculator tool enabled,1. Request support on prepayment options.,"Support provides accurate advice, and calculator reflects correct savings projection for prepayments.",As expected,Passed,Paridhi,Ensures prepayment assistance with calculation tool
+,,,2. Use calculator tool for savings projection.,,,,,
+,,,3. Confirm guidance accuracy.,,,,,
+9. Test real-time support for loan payment failure and troubleshooting steps,TC_CS_009,Loan payment failure,1. Simulate payment failure.,"Support offers immediate troubleshooting steps, successfully resolving payment failure.",As expected,Passed,Paridhi,Tests support response to urgent payment issues
+,,,2. Contact support immediately.,,,,,
+,,,3. Follow troubleshooting steps provided by support.,,,,,
+10. Confirm correct transfer of customer support chat history to email for future reference,TC_CS_010,Chat session with key information,1. Complete chat on loan issue.,Support system sends complete chat transcript to customer’s email accurately.,As expected,Passed,Paridhi,Verifies transcript delivery for reference
+,,,2. Request transcript email.,,,,,
+,,,3. Verify email with chat history.,,,,,
+11. Validate support system’s automated response time and escalation for overdue repayments,TC_CS_011,Account in overdue status,1. Let loan go overdue.,"Support sends automated reminders for overdue repayments, escalating if issue remains unaddressed.",As expected,Passed,Paridhi,Ensures response to overdue accounts
+,,,2. Observe support’s automated message frequency.,,,,,
+,,,3. Confirm escalation protocol if overdue remains unresolved.,,,,,
+12. Verify support’s process for handling customer complaints regarding loan interest miscalculation,TC_CS_012,Interest calculation error suspected,1. Report suspected interest miscalculation.,Support investigates and provides resolution details on interest miscalculation if error is validated.,As expected,Passed,Paridhi,Tests complaint handling for financial errors
+,,,2. Open support ticket.,,,,,
+,,,3. Monitor response and resolution.,,,,,
+13. Ensure support follows standard procedure for identity verification before providing sensitive info,TC_CS_013,Customer requests sensitive loan info,1. Contact support requesting account details.,"Support verifies customer identity before providing any sensitive loan information, ensuring security protocol is followed.",As expected,Passed,Paridhi,Confirms security protocol adherence
+,,,2. Verify identity using security questions.,,,,,
+,,,3. Confirm access to information.,,,,,
+14. Test multi-channel support availability for handling urgent loan-related issues,TC_CS_014,Loan account with urgent issue,"1. Attempt to reach support through multiple channels (chat, email, phone).","Each support channel responds within SLA, providing assistance through all available channels.",As expected,Passed,Paridhi,Ensures SLA compliance across all support channels
+,,,2. Confirm each channel responds within SLA.,,,,,
+15. Validate support system’s process for providing loan settlement statement upon request,TC_CS_015,Customer requests settlement statement,1. Request loan settlement statement through support.,"Settlement statement is generated accurately and provided within defined SLA, detailing all relevant amounts and final settlement details.",As expected,Passed,Paridhi,Ensures timely and accurate statement provision
+,,,2. Confirm document details.,,,,,
+,,,3. Verify receipt within expected timeframe.,,,,,
