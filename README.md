@@ -46,7 +46,7 @@ Below is a list of test case files by scenario. Each file can be downloaded and 
 5. **[Interest Calculation and Loan Terms](InterestCalculation.csv)**: Test cases to validate accurate interest calculations based on loan amount, duration, and other factors.
 6. **[Payment Processing and Transaction History](PaymentProcess.csv)**: Test cases for payment submissions, history tracking, and error handling.
 8. **[Error Handling and Input Validation](ErrorHandling.csv)**: Test cases to ensure robust handling of invalid inputs and unexpected user actions.
-9. **[Repayment Schedule](#)**: Test cases for verifying repayment options, schedules, and calculations based on user loans.
+9. **[Repayment Schedule](RepaymentSchedule.csv)**: Test cases for verifying repayment options, schedules, and calculations based on user loans.
 10. **[Prepayment Options](#)**: Test cases to check functionality and validation of prepayment options for existing loans.
 11. **[Customer Support](#)**: Test cases for the customer support functionality, including chat support and FAQs.
 12. **[Notifications and Alerts](#)**: Test cases to ensure users receive timely notifications regarding payment due dates and account changes.
