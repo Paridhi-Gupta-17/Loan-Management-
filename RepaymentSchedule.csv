@@ -1,0 +1,42 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify generation of accurate monthly repayment schedule based on loan terms,TC_RS_001,Loan terms and amount approved,1. Access the loan account.,"Repayment schedule displays correct monthly amounts, adhering to loan terms and interest rate.",Displayed as expected,Passed,Paridhi,Ensures schedule accuracy based on loan terms
+,,,2. Generate repayment schedule.,,,,,
+,,,3. Verify monthly amounts match loan terms (principal + interest).,,,,,
+2. Confirm auto-adjustment of repayment schedule when interest rate changes for variable loans,TC_RS_002,Active loan with variable interest rate,1. Initiate interest rate change.,"Schedule auto-updates with new interest rate, recalculating future payments accurately.",Updated as expected,Passed,Paridhi,Validates system adaptability to interest fluctuations
+,,,2. Generate updated repayment schedule.,,,,,
+,,,3. Check that updated schedule reflects new interest.,,,,,
+3. Validate bi-weekly payment schedule option and accurate calculation,TC_RS_003,Bi-weekly repayment option available,1. Set repayment frequency to bi-weekly.,"Repayment schedule reflects bi-weekly payments, splitting monthly amount accurately.",Displayed as expected,Passed,Paridhi,Confirms alternative schedules like bi-weekly payments
+,,,2. Generate schedule.,,,,,
+,,,3. Verify amount and dates align with bi-weekly schedule.,,,,,
+4. Test error message for invalid payment dates outside allowable range,TC_RS_004,Schedule generated with invalid dates,1. Attempt to set repayment dates beyond permissible range.,System shows error message restricting dates to allowable range.,Error displayed correctly,Passed,Paridhi,Verifies error handling for date restrictions
+,,,2. Confirm schedule.,,,,,
+5. Ensure accurate interest calculation for early repayment,TC_RS_005,Early repayment option enabled,1. Select early repayment.,"Schedule adjusts interest for early repayment, reducing total interest owed.",Adjusted as expected,Passed,Paridhi,Tests interest recalculations for early repayment cases
+,,,2. Check repayment schedule for adjusted interest.,,,,,
+,,,3. Verify final payment amount updates accurately.,,,,,
+6. Validate notification trigger for approaching due date in repayment schedule,TC_RS_006,Repayment due date set,1. Wait until 3 days before due date.,Notification is sent 3 days before due date with repayment details.,Notification received,Passed,Paridhi,Tests timely reminders for upcoming payments
+,,,2. Check for notification in system and email.,,,,,
+,,,3. Verify reminder details.,,,,,
+7. Test partial payment application and impact on remaining repayment schedule,TC_RS_007,Loan allows partial payments,1. Make a partial payment.,"Partial payment is recorded, and future schedule reflects reduced balance accurately.",Partial payment recorded,Passed,Paridhi,Confirms flexibility in applying partial payments
+,,,2. Generate new repayment schedule.,,,,,
+,,,3. Verify outstanding balance and adjusted schedule.,,,,,
+8. Verify skip-payment feature's impact on repayment schedule for deferred loans,TC_RS_008,Skip-payment option available,1. Opt to skip one payment.,"Skipped payment is recorded, and schedule updates with extended loan period or adjusted next payment.",Skipped as expected,Passed,Paridhi,Tests loan deferment without penalties
+,,,2. Confirm changes in repayment schedule.,,,,,
+,,,3. Check new dates and total balance.,,,,,
+9. Confirm system support for round-off in installment amounts for convenience,TC_RS_009,Rounding preference enabled in settings,1. Generate repayment schedule.,"Schedule shows rounded-off installments, with the final amount adjusted for accuracy.",Rounded amounts displayed,Passed,Paridhi,Tests user-friendly rounding feature
+,,,2. Verify rounded installment amounts and adjusted final payment.,,,,,
+10. Ensure penalty calculation and display when payment is missed beyond grace period,TC_RS_010,Loan has a defined grace period for payments,1. Miss a payment beyond grace period.,"System applies and displays penalty for late payment, updating total repayment amount.",Penalty applied as expected,Passed,Paridhi,Ensures penalties are reflected in updated schedules
+,,,2. Check for penalty amount in updated schedule.,,,,,
+,,,3. Confirm accurate penalty.,,,,,
+11. Validate ability to download repayment schedule as PDF,TC_RS_011,User logged into loan account,1. Access repayment schedule.,"Downloaded PDF shows complete, accurate repayment schedule.",PDF downloaded correctly,Passed,Paridhi,Confirms ease of accessing schedule offline
+,,,"2. Click on ""Download as PDF"" option.",,,,,
+,,,3. Open downloaded file to verify details.,,,,,
+12. Check functionality of adjusting schedule based on extra principal payment,TC_RS_012,Extra principal payment option enabled,1. Make an extra principal payment.,"Schedule updates either by shortening term or lowering installment, as per loan policy.",Extra payment adjusted,Passed,Paridhi,Tests additional principal payments to reduce debt faster
+,,,2. Generate updated schedule.,,,,,
+,,,3. Confirm shortened loan period or reduced amount.,,,,,
+13. Validate schedule adjustments for payment holiday (no payments during certain months),TC_RS_013,Loan offers payment holiday feature,1. Enable payment holiday for specific months.,"Schedule shows skipped months and resumes correctly, with adjusted total term.",Adjusted as expected,Passed,Paridhi,Ensures flexibility for payment holidays
+,,,2. Verify schedule updates with new repayment start after holiday.,,,,,
+14. Test display of payment amount breakdown (principal vs interest) in schedule,TC_RS_014,Detailed breakdown option enabled,1. View repayment schedule.,Schedule displays each payment’s breakdown into principal and interest components.,Breakdown displayed,Passed,Paridhi,Verifies transparent payment breakdown
+,,,2. Check breakdown of each installment into principal and interest.,,,,,
+15. Validate email notification for schedule updates after loan restructuring,TC_RS_015,Loan restructuring completed,1. Restructure loan.,Email notification sent with details of restructured schedule changes.,Email received correctly,Passed,Paridhi,Confirms schedule changes are communicated to users
+,,,2. Generate updated schedule.,,,,,
+,,,3. Check email for new schedule notification.,,,,,
