@@ -1,0 +1,45 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify successful payment processing and transaction recording,TC_PP_001,User has an outstanding loan balance,1. Login to system.,"Payment is processed successfully, loan balance updated, and transaction recorded in history with timestamp and amount.",Payment processed as expected,Passed,Paridhi,Ensures that loan payments are reflected accurately in history
+,,,2. Navigate to payment section.,,,,,
+,,,3. Enter outstanding loan balance amount.,,,,,
+,,,4. Select payment method.,,,,,
+,,,5. Confirm payment.,,,,,
+2. Test duplicate payment prevention when two sessions initiate payment,TC_PP_002,User logged in from two sessions,1. Login from two devices.,System should prevent duplicate payment and show a warning if payment is in process.,Duplicate payment prevented,Passed,Paridhi,Checks for double payment risk due to multiple login sessions
+,,,2. Initiate payment for the same loan on both.,,,,,
+,,,3. Confirm payment on each session simultaneously.,,,,,
+3. Verify partial payment processing and accurate balance update,TC_PP_003,Loan with outstanding balance,1. Go to payment section.,Partial payment is accepted and balance updates accurately with new outstanding amount displayed.,Partial payment recorded,Passed,Paridhi,Ensures partial payments correctly adjust remaining balance
+,,,2. Enter a partial payment amount.,,,,,
+,,,3. Confirm payment.,,,,,
+,,,4. Verify remaining loan balance in transaction history.,,,,,
+4. Validate payment decline for expired card,TC_PP_004,Expired card saved in user profile,1. Select expired card for payment.,"Payment fails with an error indicating expired card, and no transaction record added.",Error displayed as expected,Passed,Paridhi,Tests system’s response to invalid payment method
+,,,2. Enter payment amount.,,,,,
+,,,3. Confirm transaction.,,,,,
+5. Confirm accurate interest and loan balance update after payment on variable interest loans,TC_PP_005,Loan has variable interest rate,1. Begin payment for loan with variable interest.,Payment reflects accurate interest and balance updates according to loan’s variable rate.,Interest and balance accurate,Passed,Paridhi,Tests real-time interest rate updates during payment
+,,,2. Verify displayed interest amount.,,,,,
+,,,3. Confirm payment and check updated balance.,,,,,
+6. Test notification on payment failure due to insufficient bank funds,TC_PP_006,Bank account with insufficient funds,1. Choose bank account with low balance.,"Payment fails with insufficient funds message, and no transaction history entry.",Message displayed accurately,Passed,Paridhi,Verifies user is notified when funds are inadequate
+,,,2. Enter payment amount.,,,,,
+,,,3. Confirm payment.,,,,,
+7. Check real-time loan balance update in dashboard after successful payment,TC_PP_007,User dashboard displays real-time balances,1. Complete a payment.,Dashboard shows updated loan balance immediately after payment confirmation.,Balance updated instantly,Passed,Paridhi,Ensures synchronization between transaction and dashboard
+,,,2. Return to dashboard and verify updated loan balance.,,,,,
+8. Validate refund transaction history entry after failed payment reversal,TC_PP_008,User initiated a failed payment,1. Attempt a payment that fails.,Refund entry appears in history for failed transaction.,Refund entry recorded,Passed,Paridhi,Confirms refunds are logged for transparency
+,,,2. Check transaction history for refund entry.,,,,,
+9. Test system behavior for minimum allowable payment amount,TC_PP_009,User account allows minimum payment threshold,1. Navigate to payment section.,Payment fails with message indicating minimum payment amount.,Minimum amount error shown,Passed,Paridhi,Verifies system enforces minimum payment amount
+,,,2. Enter payment amount below minimum threshold.,,,,,
+,,,3. Confirm payment.,,,,,
+10. Validate transaction history filter for specific loan payments only,TC_PP_010,User with multiple loans,1. Go to transaction history.,"Only selected loan’s payments appear, providing a clear view for that loan.",Filter works as expected,Passed,Paridhi,Confirms filtering by loan functionality in transaction history
+,,,2. Apply filter to view payments specific to one loan.,,,,,
+,,,3. Review filtered entries.,,,,,
+11. Verify multi-currency support for payments with conversion rate applied,TC_PP_011,Loan amount in foreign currency,1. Enter loan payment with a different currency.,Transaction reflects converted amount and original currency with current rate applied.,Conversion recorded accurately,Passed,Paridhi,Ensures multi-currency support for international payments
+,,,2. Confirm payment.,,,,,
+,,,3. Check converted amount in transaction history.,,,,,
+12. Test restriction of loan payments from blocked countries,TC_PP_012,Geo-restriction setup for blocked countries,1. Login from a blocked country.,Payment should be restricted with an alert for unsupported region.,Region restriction confirmed,Passed,Paridhi,Validates location-based payment restrictions
+,,,2. Attempt loan payment.,,,,,
+,,,3. Confirm transaction.,,,,,
+13. Confirm email notification after payment success with correct details,TC_PP_013,Email notifications enabled,1. Complete a payment.,"Email is sent immediately with accurate payment details (amount, loan ID, timestamp).",Email received correctly,Passed,Paridhi,Verifies accurate email confirmation details
+,,,2. Check email for payment confirmation.,,,,,
+14. Validate export functionality of transaction history for user download,TC_PP_014,User with populated transaction history,1. Access transaction history.,"Exported file includes all transactions with details like amount, date, loan ID.",File export successful,Passed,Paridhi,Ensures export functionality meets user documentation needs
+,,,2. Select export option.,,,,,
+,,,3. Download and review file.,,,,,
+15. Verify transaction history displays correct payment order by timestamp,TC_PP_015,User has multiple loan payments recorded,1. Go to transaction history.,"Transactions are displayed in order by timestamp, with most recent on top.",Order displayed accurately,Passed,Paridhi,Confirms transaction history order for easy navigation
+,,,2. Review entries to confirm they are sorted chronologically.,,,,,
