@@ -1,0 +1,41 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify submission of feedback with rating on loan application experience,TC_FR_001,Loan application completed,1. Navigate to the feedback page.,"Feedback submitted successfully, with confirmation message.",As expected,Passed,Paridhi,Basic feedback functionality
+,,,"2. Select a rating (e.g., 4 stars).",,,,,
+,,,3. Enter comments.,,,,,
+,,,4. Submit feedback.,,,,,
+2. Validate character limit enforcement on feedback comment box,TC_FR_002,Feedback page loaded,"1. Enter a comment exceeding character limit (e.g., 1000 chars).","System prevents submission, with error message indicating character limit exceeded.",As expected,Passed,Paridhi,Ensures character limit functionality
+,,,2. Attempt to submit.,,,,,
+3. Confirm anonymous feedback option,TC_FR_003,Feedback page loaded,1. Check “Submit as Anonymous”.,"Feedback submitted as anonymous, name hidden from review.",As expected,Passed,Paridhi,Tests anonymity option
+,,,2. Fill out feedback.,,,,,
+,,,3. Submit feedback.,,,,,
+4. Validate system stores rating history for same user on multiple loans,TC_FR_004,User has multiple loans,1. Submit feedback for Loan A.,Rating history recorded separately for each loan; user can view past ratings.,As expected,Passed,Paridhi,Ensures rating history tracking
+,,,2. Submit feedback for Loan B.,,,,,
+,,,3. Verify ratings history in profile.,,,,,
+5. Test rating update functionality (edit rating and feedback),TC_FR_005,Feedback submitted,1. Access previous feedback.,"Updated rating and comment saved successfully, and confirmation displayed.",As expected,Passed,Paridhi,Allows users to modify previous feedback
+,,,2. Edit rating and/or comment.,,,,,
+,,,3. Save changes.,,,,,
+"6. Confirm error handling on feedback submission failure (e.g., network issue)",TC_FR_006,Intermittent network,1. Fill in feedback.,"Error message displayed, with option to retry.",As expected,Passed,Paridhi,Tests error handling on network failure
+,,,2. Submit while network is disconnected.,,,,,
+7. Verify feedback submission without a rating,TC_FR_007,Feedback page loaded,1. Fill comment box without selecting a rating.,"System prevents submission, with prompt to select a rating.",As expected,Passed,Paridhi,Validates mandatory rating selection
+,,,2. Attempt to submit feedback.,,,,,
+"8. Test feedback filter options on viewing (e.g., by rating, date)",TC_FR_008,Multiple feedback submissions exist,1. Navigate to feedback view.,Feedback displays correctly according to selected filter.,As expected,Passed,Paridhi,Checks filtering options for feedback display
+,,,"2. Select filter (e.g., sort by 5-star ratings, most recent).",,,,,
+9. Validate rating only (no comment) submission functionality,TC_FR_009,Feedback page loaded,1. Select a rating without entering a comment.,Feedback submitted with rating only; confirmation message shown.,As expected,Passed,Paridhi,Ensures rating-only submissions are allowed
+,,,2. Submit feedback.,,,,,
+"10. Verify submission of feedback with attachment (e.g., screenshots)",TC_FR_010,Attachment feature enabled,1. Choose a rating and enter comments.,"Feedback submitted successfully, with attachment viewable by support.",As expected,Passed,Paridhi,Tests attachment functionality in feedback
+,,,2. Attach a screenshot.,,,,,
+,,,3. Submit feedback.,,,,,
+11. Confirm system restricts duplicate feedback submission for same loan stage,TC_FR_011,Feedback already submitted for current stage,1. Attempt to submit another feedback for the same loan stage.,System prevents duplicate feedback for same loan stage; error message displayed.,As expected,Passed,Paridhi,Prevents redundant feedback submissions
+,,,2. Observe response.,,,,,
+"12. Validate feedback deletion option within allowed time frame (e.g., 24 hours)",TC_FR_012,Feedback submitted recently,1. Submit feedback.,Feedback deleted successfully within allowed time frame; confirmation message shown.,As expected,Passed,Paridhi,Allows recent feedback to be deleted
+,,,2. Navigate to feedback history within 24 hours.,,,,,
+,,,3. Delete feedback.,,,,,
+13. Verify admin visibility of feedback ratings and comments in backend,TC_FR_013,Admin privileges enabled,1. Login as admin.,"Admin can view all feedback details, including ratings, comments, and attachments.",As expected,Passed,Paridhi,Confirms admin access to feedback
+,,,2. Navigate to feedback section.,,,,,
+,,,3. View recent feedback submissions.,,,,,
+"14. Confirm feedback status updates (e.g., ""In Review"", ""Resolved"")",TC_FR_014,Feedback submitted and under review,1. Submit feedback.,"Feedback status updates are visible to user, reflecting latest review stage.",As expected,Passed,Paridhi,Tracks feedback review process
+,,,2. Admin updates feedback status.,,,,,
+,,,3. View status on user feedback page.,,,,,
+"15. Test feedback notifications (e.g., confirmation, status update)",TC_FR_015,Notifications enabled,1. Submit feedback.,User receives confirmation and status update notifications related to their feedback.,As expected,Passed,Paridhi,Validates feedback notifications
+,,,2. Wait for confirmation notification.,,,,,
+,,,3. Check notification for status update.,,,,,
