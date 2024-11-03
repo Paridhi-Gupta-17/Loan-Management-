@@ -1,0 +1,47 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify user can update profile with mandatory fields only,TC_PM_001,"User logged in, fields pre-filled",1. Navigate to Profile Management page.,Profile should update successfully with only mandatory fields filled.,As expected,Passed,Paridhi,Tests minimum required profile update
+,,,2. Edit profile fields marked as mandatory.,,,,,
+,,,3. Save changes.,,,,,
+2. Test profile update with invalid email format,TC_PM_002,User logged in,1. Navigate to Profile page.,"System should display an error message, preventing profile update with invalid email format.",As expected,Passed,Paridhi,Validates email format restrictions
+,,,"2. Enter invalid email format (e.g., user@com).",,,,,
+,,,3. Attempt to save changes.,,,,,
+"3. Validate mobile number update with invalid characters (e.g., alphabets)",TC_PM_003,User logged in,1. Navigate to Profile page.,"System should display an error, restricting update with non-numeric mobile number input.",As expected,Passed,Paridhi,Ensures numeric-only enforcement on mobile
+,,,2. Enter invalid characters in mobile number field.,,,,,
+,,,3. Save changes.,,,,,
+4. Verify system behavior when updating profile with an existing email,TC_PM_004,"User logged in, existing email in DB",1. Navigate to Profile page.,System should prevent update and display error that email is already in use.,As expected,Passed,Paridhi,Tests duplicate email prevention
+,,,2. Enter email address that is already registered.,,,,,
+,,,3. Attempt to save changes.,,,,,
+5. Confirm profile picture upload and display in profile section,TC_PM_005,User logged in,1. Navigate to Profile page.,Profile picture should upload successfully and display correctly on profile.,As expected,Passed,Paridhi,Tests profile picture upload feature
+,,,2. Select and upload a valid image file.,,,,,
+,,,3. Verify uploaded image displays correctly in profile section.,,,,,
+6. Validate saving profile changes without any modifications,TC_PM_006,User logged in,1. Navigate to Profile page.,System should display a message indicating no changes were made or allow save without issues.,As expected,Passed,Paridhi,Tests response on redundant save attempts
+,,,"2. Click ""Save"" without making changes.",,,,,
+,,,3. Observe system response.,,,,,
+7. Verify profile field auto-population on profile page load,TC_PM_007,"User logged in, data in DB",1. Navigate to Profile page.,Profile fields should auto-populate accurately with current user data.,As expected,Passed,Paridhi,Ensures correct data population on profile load
+,,,2. Verify all profile fields auto-populate with stored data.,,,,,
+8. Check profile update functionality for name change with special characters,TC_PM_008,User logged in,1. Navigate to Profile page.,"System should display an error, disallowing special characters in the name field.",As expected,Passed,Paridhi,Tests validation for name input
+,,,2. Attempt to enter special characters in the name field.,,,,,
+,,,3. Save changes.,,,,,
+9. Validate system behavior for duplicate phone number in profile update,TC_PM_009,"User logged in, existing phone in DB",1. Enter a phone number already associated with another profile.,System should prevent duplicate phone number and display appropriate message.,As expected,Passed,Paridhi,Tests unique phone number constraint
+,,,2. Attempt to save changes.,,,,,
+,,,3. Observe system response.,,,,,
+10. Verify functionality to change language preference in profile settings,TC_PM_010,User logged in,1. Navigate to language settings in profile.,System should apply selected language to UI elements.,As expected,Passed,Paridhi,Tests language preference functionality
+,,,2. Select different language.,,,,,
+,,,3. Save changes and refresh page.,,,,,
+11. Confirm address field updates for international characters,TC_PM_011,User logged in,1. Enter international characters in the address field.,System should allow international characters and save accurately.,As expected,Passed,Paridhi,Validates global address support
+,,,2. Save changes.,,,,,
+,,,3. Verify saved data accuracy.,,,,,
+12. Validate “Date of Birth” field restricts future dates,TC_PM_012,User logged in,1. Navigate to Date of Birth field.,System should prevent saving and display error indicating invalid date selection.,As expected,Passed,Paridhi,Ensures accurate DOB input restrictions
+,,,2. Enter a future date.,,,,,
+,,,3. Attempt to save profile changes.,,,,,
+13. Verify address autocomplete feature in profile management,TC_PM_013,"User logged in, autocomplete enabled",1. Begin typing address in the Address field.,"System should auto-populate suggestions, enabling user to select full address.",As expected,Passed,Paridhi,Tests address autocomplete for user convenience
+,,,2. Observe if suggestions appear.,,,,,
+,,,3. Select an address from the suggestions.,,,,,
+14. Check functionality to link/unlink social media profiles,TC_PM_014,"User logged in, social media available",1. Go to Social Links section.,System should allow linking and unlinking social accounts seamlessly.,As expected,Passed,Paridhi,Validates flexibility for social profile links
+,,,2. Add a social media link.,,,,,
+,,,3. Save changes.,,,,,
+,,,4. Unlink the same account.,,,,,
+,,,5. Verify both link and unlink work as expected.,,,,,
+15. Validate notification preferences update for marketing and transactional alerts,TC_PM_015,User logged in,1. Navigate to Notification Settings.,"System should update preferences, sending only selected notifications to user.",As expected,Passed,Paridhi,Ensures correct notification preferences applied
+,,,2. Toggle preferences for marketing and transactional alerts.,,,,,
+,,,3. Save and verify email receipt based on chosen options.,,,,,
