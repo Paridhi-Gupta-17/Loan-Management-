@@ -1,0 +1,42 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify document upload handling for unsupported file types,TC_DUM_001,User logged in,1. Navigate to document upload page.,"System should display error message indicating unsupported file type, preventing upload.",As expected,Passed,Paridhi,Ensures system blocks insecure file types
+,,,"2. Attempt to upload an unsupported file type (e.g., .exe file).",,,,,
+,,,3. Observe system response.,,,,,
+2. Test upload of high-resolution document exceeding file size limit,TC_DUM_002,User logged in,1. Navigate to document upload page.,"System should restrict upload, providing error message about file size limit.",As expected,Passed,Paridhi,Tests enforcement of file size limit
+,,,"2. Attempt to upload a file larger than max limit (e.g., 25MB PDF).",,,,,
+,,,3. Observe system response.,,,,,
+3. Check system behavior for concurrent uploads of multiple documents,TC_DUM_003,User logged in,1. Select multiple documents for upload.,"System should handle all uploads concurrently without failure, ensuring successful upload of each document.",As expected,Passed,Paridhi,Validates concurrent document handling
+,,,2. Start upload of all files simultaneously.,,,,,
+,,,3. Monitor performance and completion of each file.,,,,,
+4. Validate upload process for corrupted document file,TC_DUM_004,User logged in,1. Attempt to upload a corrupted file.,"System should reject upload, displaying error regarding file integrity or corruption.",As expected,Passed,Paridhi,Ensures security against corrupted files
+,,,2. Observe system behavior and error handling.,,,,,
+5. Verify system handling of duplicate document uploads with same file name,TC_DUM_005,User logged in,1. Upload a document.,"System should prompt user, either allowing rename or preventing duplicate uploads.",As expected,Passed,Paridhi,Tests duplicate file handling
+,,,2. Attempt to upload another document with the same name.,,,,,
+,,,3. Observe system response and duplication prevention.,,,,,
+6. Confirm upload and retrieval of encrypted documents for sensitive information,TC_DUM_006,User logged in,1. Encrypt a document.,"Encrypted document should upload and retrieve successfully, maintaining data integrity upon decryption.",As expected,Passed,Paridhi,Ensures encrypted files maintain integrity
+,,,2. Upload encrypted document.,,,,,
+,,,3. Attempt to retrieve and decrypt file.,,,,,
+,,,4. Check system for successful decryption.,,,,,
+"7. Test system’s ability to allow only certain file extensions for upload (PDF, DOCX)",TC_DUM_007,User logged in,"1. Attempt to upload various file formats (PDF, DOCX, JPG, PNG, TXT).","Only PDF and DOCX files should be accepted, with others restricted.",As expected,Passed,Paridhi,Verifies file type restrictions
+,,,2. Observe which files are accepted or restricted by system.,,,,,
+8. Validate timeout error handling during large document upload in poor network conditions,TC_DUM_008,User on slow network,1. Attempt to upload a large document on a slow network.,"System should display an appropriate timeout error message, suggesting retry or file size reduction.",As expected,Passed,Paridhi,Tests handling of network issues
+,,,2. Observe for any timeout errors or incomplete upload messages.,,,,,
+9. Check system behavior when uploading scanned document with low resolution (below DPI threshold),TC_DUM_009,User logged in,1. Attempt to upload a low-resolution scanned document.,"System should flag or restrict low-quality uploads, ensuring documents meet quality standards.",As expected,Passed,Paridhi,Validates document quality checks
+,,,2. Observe if system provides quality warnings or restrictions.,,,,,
+10. Verify OCR functionality on uploaded documents for data extraction,TC_DUM_010,OCR functionality enabled,1. Upload a text-based document.,"System should accurately extract data from document, storing it in appropriate fields.",As expected,Passed,Paridhi,Tests OCR capability for text extraction
+,,,2. Enable OCR feature.,,,,,
+,,,3. Verify extracted data accuracy post-upload.,,,,,
+"11. Confirm automated document classification based on content (e.g., ID, Proof of Income)",TC_DUM_011,Document classification feature active,"1. Upload multiple document types (ID, Income Proof).","Documents should auto-classify accurately based on content, without user intervention.",As expected,Passed,Paridhi,Ensures automated document classification
+,,,2. Verify automatic categorization accuracy in the system.,,,,,
+12. Test document upload and access control for restricted visibility (internal vs. external access),TC_DUM_012,Restricted access feature enabled,1. Upload a restricted document.,"Restricted documents should only be accessible by authorized users, with others receiving access denial message.",As expected,Passed,Paridhi,Confirms access controls for sensitive docs
+,,,"2. Attempt to access from different user roles (internal, external).",,,,,
+,,,3. Verify access limitations.,,,,,
+13. Validate renaming functionality for documents post-upload without affecting content,TC_DUM_013,User logged in,1. Upload a document.,"System should allow renaming without altering document content, with changes reflecting in system.",As expected,Passed,Paridhi,Tests document renaming functionality
+,,,2. Attempt to rename document.,,,,,
+,,,3. Check if file contents remain unchanged post-renaming.,,,,,
+"14. Confirm ability to preview uploaded document without downloading (e.g., for PDF or DOCX formats)",TC_DUM_014,User logged in,1. Upload a document.,"System should allow document preview in-browser, displaying accurate representation of original content.",As expected,Passed,Paridhi,Ensures preview feature for supported formats
+,,,2. Access preview mode.,,,,,
+,,,3. Verify document preview quality and functionality.,,,,,
+15. Check bulk document upload and indexing for efficient retrieval and sorting in document repository,TC_DUM_015,User logged in with bulk upload feature active,1. Select multiple documents for bulk upload.,"All documents should upload in bulk, with indexing completed for each, enabling efficient sorting and retrieval in repository.",As expected,Passed,Paridhi,Tests bulk upload and indexing for document mgmt
+,,,2. Upload all documents at once.,,,,,
+,,,3. Verify system indexes and categorizes for quick retrieval.,,,,,
