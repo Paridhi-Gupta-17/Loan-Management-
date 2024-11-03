@@ -1,0 +1,17 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+16. Validate support for customers requesting interest rate adjustment due to changing market conditions,TC_CS_016,Market rate changes recently,1. Customer requests interest rate adjustment.,"Support assesses and provides an accurate response on eligibility, and if eligible, updates the interest rate, notifying the customer through secure communication.",As expected,Passed,Paridhi,Tests support’s knowledge of interest adjustments
+,,,2. Support assesses eligibility.,,,,,
+,,,"3. If eligible, provide revised rate details and document adjustment procedure.",,,,,
+17. Confirm support’s ability to provide detailed loan amortization schedules upon request,TC_CS_017,Loan account in active repayment status,1. Customer requests detailed amortization schedule.,"Amortization schedule is generated accurately and shared with customer, showing correct details for each repayment period.",As expected,Passed,Paridhi,Ensures amortization schedule accuracy
+,,,2. Support generates schedule.,,,,,
+,,,"3. Verify all breakdowns for principal, interest, and balances.",,,,,
+18. Test support protocol for identifying and resolving fraudulent loan account access attempts,TC_CS_018,System alert of potential unauthorized access,1. Simulate suspicious access activity.,"Support follows strict protocol, verifying customer’s identity and securing the account from unauthorized access or potential fraud.",As expected,Passed,Paridhi,Validates fraud detection and response procedures
+,,,2. Support receives alert.,,,,,
+,,,3. Follow verification protocol with customer.,,,,,
+,,,4. Lock or secure account if necessary.,,,,,
+19. Check support assistance for loan payment deferral requests due to emergency financial situations,TC_CS_019,Customer qualifies for deferral due to hardship,1. Customer requests payment deferral.,"Support verifies eligibility and, if criteria are met, accurately updates the loan with a deferred payment schedule and provides confirmation to customer.",As expected,Passed,Paridhi,Tests emergency payment deferral process
+,,,2. Support reviews criteria.,,,,,
+,,,"3. If eligible, process deferral and update repayment schedule accordingly.",,,,,
+"20. Validate support’s ability to assist with co-signer information changes, including identity verification",TC_CS_020,Request for co-signer update received,1. Customer requests update to co-signer details.,"Support successfully verifies identities, updates co-signer information, and sends confirmation of the update to both customer and co-signer securely.",As expected,Passed,Paridhi,Ensures secure handling of co-signer modifications
+,,,2. Verify both customer and co-signer identities.,,,,,
+,,,3. Support updates records and confirms change.,,,,,
