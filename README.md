@@ -49,7 +49,7 @@ Below is a list of test case files by scenario. Each file can be downloaded and 
 9. **[Repayment Schedule](RepaymentSchedule.csv)**: Test cases for verifying repayment options, schedules, and calculations based on user loans.
 10. **[Prepayment Options](PrepaymentOptions.csv)**: Test cases to check functionality and validation of prepayment options for existing loans.
 11. **[Customer Support](#)**: Test cases for the customer support functionality, including chat support and FAQs.
-12. **[Notifications and Alerts](#)**: Test cases to ensure users receive timely notifications regarding payment due dates and account changes.
+12. **[Notifications and Alerts](Notifications&Alerts.csv)**: Test cases to ensure users receive timely notifications regarding payment due dates and account changes.
 13. **[Document Upload and Management](#)**: Test cases to validate the upload, management, and retrieval of necessary documents for loan applications.
 14. **[Profile Management](#)**: Test cases for updating user profile information, including personal details and account settings.
 15. **[Logout Functionality](#)**: Test cases to ensure proper logout behavior and session management.
