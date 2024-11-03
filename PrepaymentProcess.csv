@@ -1,0 +1,46 @@
+Scenario Description,Test Case ID,Pre Condition,Steps to Execute,Expected Result,Actual Result,Status,Executed QA Name,Misc (Comments)
+1. Verify option to make full prepayment and its impact on loan balance and closure,TC_PP_001,Loan is active with outstanding balance,1. Access loan account.,Full prepayment reduces loan balance to zero and marks loan as closed.,As expected,Passed,Paridhi,Tests loan closure on full prepayment
+,,,2. Select full prepayment option.,,,,,
+,,,3. Confirm the loan balance is zero and account is closed.,,,,,
+2. Validate partial prepayment option and adjustment of remaining balance and schedule,TC_PP_002,Loan allows partial prepayments,1. Select partial prepayment option.,"Partial payment reduces balance, updates schedule with lower principal and adjusted installments.",As expected,Passed,Paridhi,Ensures system handles partial prepayments
+,,,2. Enter an amount.,,,,,
+,,,3. Verify balance reduction and updated repayment schedule.,,,,,
+3. Confirm early payoff without penalty for prepayment if within a no-penalty period,TC_PP_003,No-penalty period is defined in loan terms,1. Attempt full prepayment within no-penalty period.,"Loan is paid off early without penalty, closing the account.",As expected,Passed,Paridhi,Tests penalty-free prepayment within allowed period
+,,,2. Confirm no penalties applied.,,,,,
+,,,3. Verify loan balance is zero.,,,,,
+4. Test prepayment during lock-in period triggers appropriate penalty as per loan terms,TC_PP_004,Lock-in period applies for prepayments,1. Attempt prepayment during lock-in period.,"System applies penalty as defined in loan terms, adding it to prepayment amount.",As expected,Passed,Paridhi,Confirms penalties for early payments within lock-in
+,,,2. Confirm penalty is added to total amount.,,,,,
+,,,3. Verify final amount.,,,,,
+5. Validate recalculated monthly installments after partial prepayment with reduced principal,TC_PP_005,Partial prepayment reduces principal,1. Select partial prepayment.,"Monthly installments decrease as principal is reduced, reflecting accurate recalculation.",As expected,Passed,Paridhi,Checks if system accurately recalculates installments
+,,,2. Check updated schedule.,,,,,
+,,,3. Confirm new installment amount reflects lower principal.,,,,,
+6. Ensure customer can select specific future date for scheduling prepayment,TC_PP_006,"Loan account active, future scheduling option on",1. Select prepayment option.,Scheduled prepayment is shown in transaction history with chosen date.,As expected,Passed,Paridhi,Verifies scheduled prepayment functionality
+,,,2. Choose a future date for payment.,,,,,
+,,,3. Confirm scheduled payment is listed in transactions.,,,,,
+7. Confirm notification reminder for scheduled prepayment prior to payment date,TC_PP_007,Future date prepayment is scheduled,1. Schedule a prepayment.,Notification is sent 2 days before scheduled prepayment date.,As expected,Passed,Paridhi,Tests reminder system for scheduled prepayments
+,,,2. Check for reminder notification 2 days before payment.,,,,,
+,,,3. Confirm message content.,,,,,
+8. Verify accurate penalty calculation for partial prepayment exceeding a certain threshold,TC_PP_008,Penalty applies for large partial prepayments,1. Attempt a large partial prepayment (over threshold).,"System accurately calculates penalty based on loan terms, adding it to payment amount.",As expected,Passed,Paridhi,Ensures penalties on large prepayments
+,,,2. Confirm penalty is applied.,,,,,
+,,,3. Verify penalty amount matches terms.,,,,,
+9. Check system restriction on prepayment frequency if limit is defined,TC_PP_009,Loan terms restrict frequent prepayments,1. Make a prepayment.,"Error message restricts further prepayment within defined period, per loan terms.",As expected,Passed,Paridhi,Tests limits on prepayment frequency
+,,,2. Attempt another prepayment within restricted period.,,,,,
+,,,3. Confirm error message and restriction.,,,,,
+10. Validate option to select specific amount for partial prepayment and impact on remaining principal,TC_PP_010,Partial prepayment option available,1. Access partial prepayment feature.,"System accepts chosen amount, updates principal accordingly, and adjusts balance.",As expected,Passed,Paridhi,Verifies custom amount selection for partial payments
+,,,2. Enter a specific amount.,,,,,
+,,,3. Verify new principal balance after payment.,,,,,
+11. Confirm accurate adjustment of loan term if prepayment shortens the loan duration,TC_PP_011,Loan allows term adjustment upon prepayment,1. Make a partial prepayment.,"Loan term shortens due to prepayment, reducing the total repayment period.",As expected,Passed,Paridhi,Ensures prepayments impact loan term accurately
+,,,2. Check updated schedule.,,,,,
+,,,3. Confirm loan term is shortened.,,,,,
+"12. Test penalty fee waiver for prepayment under exceptional cases (e.g., financial hardship)",TC_PP_012,Hardship waiver policy in loan terms,1. Request penalty waiver.,"System waives penalty as per hardship policy, applying only prepayment amount to principal.",As expected,Passed,Paridhi,Tests conditional penalty waivers
+,,,2. Confirm waiver is applied to prepayment.,,,,,
+,,,3. Verify no penalty in final amount.,,,,,
+13. Verify that partial prepayments are correctly reflected in monthly statements,TC_PP_013,Loan account has active statements,1. Make a partial prepayment.,"Monthly statement reflects partial prepayment, showing updated balance and next installments.",As expected,Passed,Paridhi,Ensures transparency in loan statements
+,,,2. Access next monthly statement.,,,,,
+,,,3. Confirm prepayment details in statement.,,,,,
+14. Test inability to make prepayment if loan is in arrears and restricts prepayment until dues cleared,TC_PP_014,Loan has outstanding dues,1. Attempt prepayment while loan has arrears.,"Prepayment restricted until arrears are cleared, after which it’s allowed.",As expected,Passed,Paridhi,Confirms arrears prevent prepayment until resolved
+,,,2. Confirm system restriction.,,,,,
+,,,3. Make regular payment and reattempt prepayment.,,,,,
+"15. Ensure system applies chosen prepayment allocation method (e.g., towards principal or next installment)",TC_PP_015,Loan offers allocation preference for prepayment,1. Select prepayment option.,"Prepayment is allocated as per chosen method, impacting either principal reduction or next installment amount.",As expected,Passed,Paridhi,Tests flexibility in prepayment allocation methods
+,,,2. Choose allocation method (principal or installment).,,,,,
+,,,3. Verify impact on selected allocation.,,,,,
